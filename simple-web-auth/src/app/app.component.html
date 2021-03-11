@@ -1,0 +1,15 @@
+<h1>Auth Sample</h1>
+
+<button (click)="login()" [hidden]="loggedIn">Login</button>
+<button (click)="logout()"[hidden]="!loggedIn">Logout</button>
+
+<div *ngIf="loggedIn">
+    <h2>Perfekt :)</h2>
+
+    <h2>Profile</h2>
+
+    <button (click)="getProfile()">Get Profile Info</button>
+    <div *ngIf="profile">
+        <p>Display Name: {{ profile?.displayName }}</p>
+    </div>
+</div>
